@@ -16,7 +16,7 @@ export default {
     children: {
       description: 'body',
       type: { summary: 'string', required: true },
-      defaultValue : <p> [Votre Texte]</p>
+      defaultValue: <p> [Votre Texte]</p>,
     },
     show: {
       description: 'Show Modal',
@@ -38,13 +38,13 @@ export default {
       control: {
         type: 'function',
       },
-      action: 'onClose', 
+      action: 'onClose',
     },
-    footer : {
+    footer: {
       description: 'button Modal',
       type: { summary: 'string', required: true },
-      defaultValue : <p> [Text button]</p>
-    }
+      defaultValue: <p> [Text button]</p>,
+    },
   },
 };
 

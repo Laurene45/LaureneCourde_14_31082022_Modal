@@ -1,44 +1,82 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import Modal from '../../lib/Modal/Modal';
+import {render,screen,fireEvent} from '@testing-library/react';
+import Modal from '.';
 
-describe('Given I am a developper', () => {
-  describe('When I use the Modal component and set props show to true ', () => {
-    //Modal visible
-    test('Then my Modal should be visible', () => {
-      render(<Modal show={true} />);
-      expect(screen.getByTestId('modal')).toBeTruthy();
-    });
-  });
-});
-
-describe('Given I am a user and the modal is visible', () => {
-  describe("When I click on modal's button", () => {
-    //event on button
-    test('Then a event should be trigger', () => {
+describe('Given Modal component', () => {
+  describe('When I click on button of modal', () => {
+    test('Then a event should be triggered if onclose props is defined', () => {
       const mockCallBack = jest.fn();
       render(<Modal show={true} onClose={mockCallBack} />);
       fireEvent.click(screen.getByTestId('close-button'));
       expect(mockCallBack).toHaveBeenCalled();
+      expect(mockCallBack).toHaveBeenCalledTimes(1);
+    });
+
+    test('Then it should throw an error if onclose props is not defined', () => {
+      expect(() => {
+        render(<Modal show={true} />);
+      }).toThrow();
     });
   });
-});
 
-describe('Given I am a developper', () => {
-  describe('When the Modal component show true ', () => {
-    //title show
-    test('Then a title should display', () => {
-      render(<Modal title={'success'} />);
-      expect(screen.queryByText('success')).toBeNull();
+  describe('When I use the Modal component and set props show to true ', () => {
+    beforeEach(() => {
+      render(
+        <Modal
+          show={true}
+          title={'test-title'}
+          footer={'test-footer'}
+          onClose={() => {}}
+        >
+          Children
+        </Modal>
+      );
+    });
+
+    test('Then my Modal should be visible', () => {
+      expect(screen.getByTestId('modal')).toBeTruthy();
+    });
+
+    test('Then text body should be displayed', () => {
+      expect(screen.queryByText('Children')).toBeTruthy();
+    });
+
+    test('Then text title should be displayed', () => {
+      expect(screen.queryByText('test-title')).toBeTruthy();
+    });
+
+    test('Then footer should be displayed', () => {
+      expect(screen.queryByText('test-footer')).toBeTruthy();
     });
   });
-});
 
-describe('Given I am a developper', () => {
-  describe('When the Modal component show true ', () => {
-    //text body show
-    test('Then text body should display', () => {
-      render(<Modal children={'votre message'} />);
-      expect(screen.queryByText('votre message')).toBeNull();
+  describe('When I use the Modal component and set props show to false ', () => {
+    beforeEach(() => {
+      render(
+        <Modal
+          show={false}
+          title={'test-title'}
+          footer={'test-footer'}
+          onClose={() => {}}
+        >
+          Children
+        </Modal>
+      );
+    });
+
+    test('Then my Modal should not be visible', () => {
+      expect(screen.queryByTestId('modal')).toBeNull();
+    });
+
+    test('Then text body should be displayed', () => {
+      expect(screen.queryByText('Children')).toBeFalsy();
+    });
+
+    test('Then text title should be displayed', () => {
+      expect(screen.queryByText('test-title')).toBeFalsy();
+    });
+
+    test('Then footer should be displayed', () => {
+      expect(screen.queryByText('test-footer')).toBeFalsy();
     });
   });
 });

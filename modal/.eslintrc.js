@@ -16,6 +16,4 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single']
   },
-  
-  /*parser: ['@babel/eslint-parser'],*/
 };

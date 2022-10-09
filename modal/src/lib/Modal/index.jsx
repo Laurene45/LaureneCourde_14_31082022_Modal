@@ -15,11 +15,18 @@ import './Modal.scss';
  */
 
 const Modal = ({ show, title, children, footer, onClose }) => {
+  if (!onClose || typeof onClose !== 'function') {
+    throw new Error('props onClose should be a function needed');
+  }
   const modal = (
     <div className="modal" data-testid="modal">
       <div className="modal-container">
-        <h3 className="modal-title" data-testid="modal-title">{title}</h3>
-        <p className="modal-body" data-testid="modal-body">{children}</p>
+        <h3 className="modal-title" data-testid="modal-title">
+          {title}
+        </h3>
+        <p className="modal-body" data-testid="modal-body">
+          {children}
+        </p>
         <button
           className="modal-footer close-button"
           data-testid="close-button"
@@ -35,10 +42,6 @@ const Modal = ({ show, title, children, footer, onClose }) => {
 
   return show ? ReactDOM.createPortal(modal, document.body) : null;
 };
-
-//il est parfois utile d’insérer un enfant à un autre emplacement du DOM
-// React *ne crée pas* une nouvelle div, mais affiche les enfants dans le Domnode.
-// Domnode peut être n’importe quel élément valide du DOM, peu importe sa position.
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
