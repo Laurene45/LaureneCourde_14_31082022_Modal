@@ -14,7 +14,7 @@ import './Modal.scss';
  * @returns {Reactnode}  jsx injected in DOM
  */
 
-const Modal = ({ show, title, children, footer, onClose }) => {
+export const Modal = ({ show, title, children, footer, onClose }) => {
   if (!onClose || typeof onClose !== 'function') {
     throw new Error('props onClose should be a function needed');
   }
@@ -54,5 +54,3 @@ Modal.propTypes = {
   ]),
   footer: PropTypes.object,
 };
-
-export default Modal;

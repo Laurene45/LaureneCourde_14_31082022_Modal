@@ -1,0 +1,80 @@
+/*colors */
+/*breakpoints*/
+body {
+  font-family: "Roboto", "Source Sans Pro", Arial, sans-serif;
+  background-color: #fafafc;
+}
+body a {
+  text-decoration: none;
+}
+body input[type=search]::-webkit-search-decoration,
+body input[type=search]::-webkit-search-cancel-button,
+body input[type=search]::-webkit-search-results-button,
+body input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.modal-container {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: 1.5px solid #d6d8e7;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #FFFFFF;
+  width: 400px;
+}
+@media screen and (min-width: 425px) {
+  .modal-container {
+    width: 310px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-container {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal-container {
+    width: 400px;
+  }
+}
+
+.modal-title {
+  font-size: 30px;
+  margin: 15px;
+}
+
+.modal-body {
+  font-size: 20px;
+}
+
+.modal-footer {
+  background-color: red;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  border: 1.5px solid #d6d8e7;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.close-button {
+  background-color: red;
+}
