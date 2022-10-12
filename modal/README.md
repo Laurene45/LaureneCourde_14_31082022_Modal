@@ -50,7 +50,7 @@ const  modal = (
 
 ## Notes
 
--   [link to package]  ( A RAJOUTER )
+- Package NPM : [lc_modal_p14_custom]( https://www.npmjs.com/package/lc_modal_p14_custom)
 
 ## Author
 
