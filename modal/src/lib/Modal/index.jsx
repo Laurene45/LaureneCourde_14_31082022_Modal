@@ -52,5 +52,5 @@ Modal.propTypes = {
     PropTypes.node,
     PropTypes.element,
   ]),
-  footer: PropTypes.object,
+  footer: PropTypes.string,
 };
