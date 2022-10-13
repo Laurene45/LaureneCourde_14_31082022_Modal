@@ -50,8 +50,8 @@ const  modal = (
 
 ## Notes
 
-- Package NPM : [lc_modal_p14_custom]( https://www.npmjs.com/package/lc_modal_p14_custom)
-
+- Package NPM : [lc_modal_custom_projet14]( https://www.npmjs.com/)
+- 
 ## Author
 
 Laurène COURDE

@@ -34935,7 +34935,7 @@ Modal.propTypes = {
   show: propTypes.exports.bool,
   title: propTypes.exports.string,
   children: propTypes.exports.oneOfType([propTypes.exports.arrayOf(propTypes.exports.node), propTypes.exports.node, propTypes.exports.element]),
-  footer: propTypes.exports.object
+  footer: propTypes.exports.string
 };
 
 export { Modal };
