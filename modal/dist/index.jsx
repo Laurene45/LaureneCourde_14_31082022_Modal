@@ -34903,17 +34903,17 @@ if (process.env.NODE_ENV !== 'production') {
  * @returns {Reactnode}  jsx injected in DOM
  */
 
+// pour le build Rollup : passer en "export const (ligne 18)" et supprimer export default
+
 var Modal = function Modal(_ref) {
   var show = _ref.show,
-      title = _ref.title,
-      children = _ref.children,
-      footer = _ref.footer,
-      onClose = _ref.onClose;
-
+    title = _ref.title,
+    children = _ref.children,
+    footer = _ref.footer,
+    onClose = _ref.onClose;
   if (!onClose || typeof onClose !== 'function') {
     throw new Error('props onClose should be a function needed');
   }
-
   var modal = /*#__PURE__*/React.createElement("div", {
     className: "modal",
     "data-testid": "modal"

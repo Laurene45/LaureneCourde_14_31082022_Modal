@@ -14,7 +14,9 @@ import './Modal.scss';
  * @returns {Reactnode}  jsx injected in DOM
  */
 
-export const Modal = ({ show, title, children, footer, onClose }) => {
+// pour le build Rollup : passer en "export const (ligne 18)" et supprimer export default
+
+const Modal = ({ show, title, children, footer, onClose }) => {
   if (!onClose || typeof onClose !== 'function') {
     throw new Error('props onClose should be a function needed');
   }
@@ -54,3 +56,5 @@ Modal.propTypes = {
   ]),
   footer: PropTypes.string,
 };
+
+export default Modal;

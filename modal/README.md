@@ -1,8 +1,6 @@
-﻿# P14 Plugin Modal
+﻿# P14 - Plugin Modal
 
-Version : 
-
-## [](https://github.com/Laurene45/LaureneCourde_14_31082022/tree/main/wealth_health) Projet 14 HRNet
+## [](https://github.com/Laurene45/LaureneCourde_14_31082022/tree/main/wealth_health) Projet 14 :  HRNet
 
 [](https://openclassrooms.com/fr/paths/314/projects/815/assignment)Cursus OpenClassrooms: Project 14
 
@@ -51,7 +49,8 @@ const  modal = (
 ## Notes
 
 - Package NPM : [lc_modal_custom_projet14]( https://www.npmjs.com/)
-- 
+
 ## Author
 
 Laurène COURDE
+
