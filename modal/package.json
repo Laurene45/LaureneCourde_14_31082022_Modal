@@ -1,5 +1,8 @@
 {
   "name": "lc_modal_custom_projet14",
+  "description" : "modal success - generic component",
+  "keywords": ["modal", "component", "success"],
+  "author-name": "Laurene COURDE",
   "version": "0.2.1",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

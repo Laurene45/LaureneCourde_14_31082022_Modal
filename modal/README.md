@@ -1,17 +1,6 @@
-﻿# P14 - Plugin Modal
+﻿# Plugin Modal
 
-## [](https://github.com/Laurene45/LaureneCourde_14_31082022/tree/main/wealth_health) Projet 14 :  HRNet
-
-[](https://openclassrooms.com/fr/paths/314/projects/815/assignment)Cursus OpenClassrooms: Project 14
-
-Convert a jquery website in React and create your own library
-
-## Skills
-
--   Deploy a front-end app
--   Code in functional javascript
--   Analyse  web app performance
--   Optimize web app performance
+modal success - generic component
 
 ## Tech
 
